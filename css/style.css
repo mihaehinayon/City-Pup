@@ -1,0 +1,373 @@
+/* 
+Project Name: City Pup
+Client: Personal;
+Author: Mihaela Hinayon
+Developer in RI
+*/
+
+
+/******************************************
+/* SETUP                   
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     clear: both;
+     content: ".";
+     display: block;
+     height: 0;
+     line-height: 0;
+     visibility: hidden;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right; 
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left; 
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+@font-face {
+     font-family: "Mairy";
+     src: url("fonts/mairy-black-webfont.woff");
+     src: url("fonts/mairy-black-webfont.woff") format ("woff"), /* Modern browsers */
+          url("fonts/mairy-black-webfont.eot?#iefix") format ("embedded-opentype"), /* IE 6, 7, and 8 */
+          url("fonts/mairy-black-webfont.svg#Mairy") format ("svg"), /* Legacy iOS */
+          url("fonts/mairy-black-webfont.ttf") format ("truetype"); /* Safari, Android, iOS */
+     font-weight: bold;
+}
+
+@font-face {
+     font-family: "Achille";
+     src: url("fonts/achillefy-black_l-webfont.woff");
+     src: url("fonts/achillefy-black_l-webfont.woff") format ("woff"), /* Modern browsers */
+          url("fonts/achillefy-black_l-webfont.eot?#iefix") format ("embedded-opentype"), /* IE 6, 7, and 8 */
+          url("fonts/achillefy-black_l-webfont.svg#Achille") format ("svg"), /* Legacy iOS */
+          url("fonts/AchilleFY-Black_l.ttf") format ("truetype"); /* Safari, Android, iOS */
+     font-weight: bold;
+}
+
+@font-face {
+     font-family: "StevieSans";
+     src: url("fonts/steviesans_light-webfont.woff");
+     src: url("fonts/steviesans_light-webfont.woff") format ("woff"), /* Modern browsers */
+          url("fonts/steviesans_light-webfont.eot?#iefix") format ("embedded-opentype"), /* IE 6, 7, and 8 */
+          url("fonts/steviesans_light-webfont.svg#StevieSans") format ("svg"), /* Legacy iOS */
+          url("fonts/steviesans_light-webfont.ttf") format ("truetype"); /* Safari, Android, iOS */
+     font-weight: normal;
+}
+
+/******************************************
+/* BASE STYLES                   
+/*******************************************/
+
+html {
+     font-size: 10px;
+}
+
+body {
+     color: #222222;
+     font-family: StevieSans;
+     line-height: 1.4;
+}
+
+html, body {
+  height: 100%;
+}
+
+a {
+     text-decoration: none;
+     color: #333333;
+}
+
+img {
+     border: 0;
+}
+
+input {
+  font-size: 1.6rem;
+  font-family: "StevieSans";
+  padding: 10px;
+  border: 1px solid white;
+  color: #BDC3C7;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+  width: 100%;
+}
+
+p {
+     font-size: 1.5rem;
+     line-height: 2.5rem;
+}
+
+.searchContainer {
+  display: flex;
+  width: 30%;
+  margin: 0 auto;
+  justify-content: center;
+  flex: 1;
+}
+
+.searchIconContainer {
+  border: 1px solid #16A085;
+  height: 40px;
+  width: 50px;
+  background-color: #16A085;
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  height: 32px;
+}
+
+/******************************************
+/* LAYOUT                 
+/*******************************************/
+
+section {
+     height: 100vh;
+}
+
+/******************************************
+/*  LANDING                 
+/*******************************************/
+
+.landing {
+  background: url("../img/background.svg") no-repeat bottom #9AD6D4 ;
+  text-align: center;
+}
+
+.landing h1 {
+     text-align: center;
+     font-family: "Mairy";
+     color: #E62550;
+     font-size: 15rem;
+     margin: 0;
+     height: 22%;
+     letter-spacing: .1rem;
+     text-shadow: 5px 5px 0px #EEEEEE;
+}
+
+.landing h2 {
+  text-transform: uppercase;
+  color: #EEEEEE;
+  margin-top: -12px;
+  letter-spacing: .3rem;
+  font-size: 1.9rem;
+};
+
+.landing .searchBar {
+  flex: 2;
+}
+
+.landing .searchIcon {
+  flex: 1;
+}
+
+.landing .ribbon {
+  margin: 0 auto;
+  margin-bottom: 40px;
+  border-top: 25px solid #34495E;
+  border-bottom: 25px solid #34495E;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent; /* Right one transparent */
+  width:35%; /* Increase Width */
+  height:0;  /* Remove Height */
+  text-align: center;
+}
+
+/******************************************
+/*  MAIN             
+/*******************************************/
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.main header {
+  height: 80px;
+  background-color: #9AD6D4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.main header h1 {
+  color: #E62550;
+  font-family: "Mairy";
+  font-size: 5rem;
+  width: 150px;
+  margin: 0;
+  letter-spacing: .1rem;
+  text-shadow: 3px 3px 0px #EEEEEE;
+
+}
+
+.main nav {
+  display: flex;
+  flex: 3;
+  justify-content: space-around;
+  align-items: stretch;
+  height: 80px;
+  padding: 0 20px;
+}
+
+.main nav a {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: #333333;
+  align-self: center;
+  padding: 30px;
+  flex: 1;
+  text-align: center;
+}
+
+.main nav a:hover {
+background-color: #F1C40F;
+
+}
+
+.main nav a:active {
+  background-color: #F1C40F;
+}
+
+.main .searchContainer {
+  flex: 1;
+}
+
+.main .searchIcon {
+  flex: 1;
+}
+
+.main .mapContainer {
+  flex: 1;
+  position: relative;
+  height: 100%;
+  display: flex;
+}
+
+.main #map {
+  flex: 1;
+}
+
+.main .blurbContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  width: 40%;
+}
+
+/*.main .blurb {
+  border: 1px solid #D8D8D8;
+  max-height: 90%;
+  margin-right: 20%;
+  background-color: rgba(255, 255, 255, .9);
+  border-radius: 5%; 
+  padding: 5%;
+}*/
+
+.main h2 {
+  font-family: "Achille";
+  font-size: 3.5em;
+  text-align: left;
+  margin: 0 0 1.5% 0;
+}
+
+.main h2 a {
+  color: #333333;
+}
+
+.main .rating img {
+  width: 27px;
+}
+
+.main footer {
+  padding: 2%;
+  height: 80px;
+  background-color: #9AD6D4;
+  position: relative;
+}
+
+.main .footerLinksContainer {
+  display: flex;
+  width: 30%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+}
+
+.main .copyright {
+  flex: 2;
+  letter-spacing: .2rem;
+}
+
+.main footer span {
+  font-size: 1.5rem;
+}
+
+.main .socialLinksContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 3;
+  height: 80px;
+}
+
+.main footer img {
+  width: 32px;
+  height: 32px;
+}
+
+.main footer a {
+  flex: 1;
+}
+
+.main footer a:hover {
+  opacity: .6;
+}
+
+
+/******************************************
+/*  ADDITIONAL STYLES                  
+/*******************************************/
+
+.background {
+     min-width: 100%;
+     height: auto;
+     position: absolute;
+     bottom: 0;
+}
+
+.clouds {
+     min-width: 42%;
+     position: absolute;
+     bottom: 40%;
+     left: 28%;
+}
+
+

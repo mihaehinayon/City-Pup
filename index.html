@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8" />
+    	<meta name="description" content="Your description goes here" />
+    	<meta name="keywords" content="one, two, three" />
+	
+		<title>City Pup</title>
+		
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/style.css" />
+
+	</head>
+	<body>
+		<section class="landing">
+			<h1> CityPup </h1>
+
+			<div class="ribbon">
+				<h2> Find dog-friendly places near you </h2>
+			</div>
+
+			<div class="searchContainer">
+				<input class="searchBar" type="search" placeholder="What are you looking for?" />
+
+				<div class="searchIconContainer">
+					<img src="img/icons/search.svg" class="searchIcon"/>
+				</div>
+			</div>
+
+
+			<div class="backgroundWrapper"> 
+
+				<img src="img/clouds.svg" class="clouds" alt="clouds" />
+
+			</div>
+		</section>
+
+		<section class="main">
+			<header>
+				<h1>CityPup</h1>
+
+				<nav>
+					<a href="#">Restaurants</a>
+					<a href="#">Shops</a>
+					<a href="#">Hotels</a>
+					<a href="#">Parks</a>
+				</nav>
+
+				<div class="searchContainer">
+					<input class="searchBar" type="search" placeholder="What are you looking for?" />
+
+					<div class="searchIconContainer">
+						<img src="img/icons/search.svg" class="searchIcon"/>
+					</div>
+			</div>
+
+			</header>
+
+			<div class="mapContainer">
+				<div id="map"></div>
+
+<!-- 				<div class="blurbContainer">
+
+					<article class="blurb">
+						<h2><a href="#">The Barking Lot</a></h2>
+
+					<div class="rating">
+							<img src="img/icons/redheart.png">
+							<img src="img/icons/redheart.png">
+							<img src="img/icons/redheart.png">
+							<img src="img/icons/halfheart.png">
+							<img src="img/icons/grayheart.png">
+						</div>
+
+						<p>
+							Artisan Carles shabby chic slow-carb mlkshk. Helvetica occupy narwhal Williamsburg, next level Schlitz beard. Asymmetrical heirloom YOLO, twee vegan post-ironic crucifix paleo wolf ennui. Gentrify High Life locavore, deep v quinoa bicycle rights cornhole Williamsburg. Wolf beard typewriter aesthetic, sartorial distillery small batch post-ironic yr Odd Future pork belly cardigan freegan. Flexitarian trust fund +1 tousled, photo booth listicle post-ironic raw denim. Tote bag scenester actually single-origin coffee, street art biodiesel lomo distillery Austin Bushwick 90's.
+						</p>
+					</article>
+				</div> -->
+			</div>
+
+			<footer>
+				<div class=footerLinksContainer>
+
+					<div class="copyright">
+						<span> &copy; MIHAELA HINAYON </span>
+					</div>
+
+					<div class="socialLinksContainer">
+						<a href="http://design.mihaelahinayon.com" target="_blank">
+							<img src="img/icons/personal_logo.svg" />
+						</a>
+						<a href="https://www.facebook.com/mihaehinayon" target="_blank">
+							<img src="img/icons/facebook.svg" />
+						</a>
+						<a href="https://twitter.com/mihaehinayon" target="_blank">
+							<img src="img/icons/twitter.svg" />
+						</a>
+						<a href="https://instagram.com/mihaehinayon/" target="_blank">
+							<img src="img/icons/instagram.svg" />
+						</a>
+						<a href="https://www.pinterest.com/mihaehinayon/" target="_blank">
+							<img src="img/icons/pinterest.svg" />
+						</a>
+					</div>
+				</div>
+			
+			</footer>
+		</section>
+
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="js/main.js"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnK1E11OeFUbQrGbY8K1AYg69d-44Frao&callback=initMap">
+    	</script>
+	</body>
+</html>
