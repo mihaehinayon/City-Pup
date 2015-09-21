@@ -131,7 +131,7 @@ var map;
         var rhodeRunner = {lat: 41.838627, lng: -71.408906};  
         map = new google.maps.Map(document.getElementById('map'), {
             center: rhodeRunner,
-            zoom: 13
+            zoom: 14
         });
 
 
